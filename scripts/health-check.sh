@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-LOG_FILE="$HOME/ops-toolkit/logs/health.log"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+LOG_DIR="$BASE_DIR/logs"
+LOG_FILE="$LOG_DIR/health.log"
+mkdir -p "$LOG_DIR"
 
 DISK_LIMIT=80
 MEM_LIMIT=80
